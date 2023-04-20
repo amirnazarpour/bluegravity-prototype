@@ -1,9 +1,7 @@
 {
-    "name": "Bluegravity.Character",
-    "rootNamespace": "Bluegravity.Character",
-    "references": [
-        "Bluegravity.Common"
-    ],
+    "name": "Bluegravity.Utility",
+    "rootNamespace": "Bluegravity.Utility",
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

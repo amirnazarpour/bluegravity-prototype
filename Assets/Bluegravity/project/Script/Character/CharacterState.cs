@@ -10,9 +10,6 @@ namespace  Bluegravity.Character
         Ready 		= 1,
         Walk 		= 2,
         Run 		= 3,
-        Jump 		= 4,
-        Climb 		= 5,
-
     }
 }
 
