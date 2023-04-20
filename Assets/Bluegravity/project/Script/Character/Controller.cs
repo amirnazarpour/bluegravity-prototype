@@ -8,15 +8,18 @@ namespace Bluegravity.Character
     public class Controller : MonoBehaviour
     {
         public AnimationContoroller animationContoroller;
-        public List<Character> character;
+        public List<GameObject> character;
         public Vector2 Direction { get; private set; }
 
         public int MovementSpeed;
 
         private bool _moving;
+        
+        
 
         private void Start()
         {
+            animationContoroller = GetComponent<AnimationContoroller>();
             animationContoroller.SetState(CharacterState.Idle);
             SetDirection(Vector2.down);
         }
@@ -100,7 +103,6 @@ namespace Bluegravity.Character
 
             Direction = direction;
 
-  
 
             int index;
 
