@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using Bluegravity.Common;
-
 using UnityEngine;
 
 public class Tool : MonoBehaviour
@@ -12,7 +11,7 @@ public class Tool : MonoBehaviour
     [ContextMenu("find")]
     public void find()
     {
-        data.Clear();
+        data = new List<PlayerPart>();
 
 
         var itrms = AllChilds(gameObject);

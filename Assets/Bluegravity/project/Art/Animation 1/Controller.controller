@@ -12,7 +12,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Release
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 7695421299916740361}
+  m_DstState: {fileID: 0}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
@@ -37,7 +37,7 @@ AnimatorStateTransition:
     m_ConditionEvent: ShieldPush
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: -9122470191466344279}
+  m_DstState: {fileID: 0}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
@@ -172,19 +172,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 3
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: TwoHanded
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Action
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Lower
@@ -193,19 +193,19 @@ AnimatorController:
     m_Motions:
     - serializedVersion: 2
       m_State: {fileID: 1102460784187021354}
-      m_Motion: {fileID: 7400000, guid: 0dcbecd6a9dba8e41a247d5fee0bde91, type: 2}
+      m_Motion: {fileID: 0}
     - serializedVersion: 2
       m_State: {fileID: 0}
-      m_Motion: {fileID: 7400000, guid: 0dcbecd6a9dba8e41a247d5fee0bde91, type: 2}
+      m_Motion: {fileID: 0}
     - serializedVersion: 2
       m_State: {fileID: 0}
-      m_Motion: {fileID: 7400000, guid: 870222e7b0de4a448a2687aeb122e38c, type: 2}
+      m_Motion: {fileID: 0}
     m_Behaviours: []
     m_BlendingMode: 0
-    m_SyncedLayerIndex: -1
+    m_SyncedLayerIndex: 1
     m_DefaultWeight: 1
     m_IKPass: 0
-    m_SyncedLayerAffectsTiming: 0
+    m_SyncedLayerAffectsTiming: 1
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
     m_Name: Upper
@@ -214,7 +214,7 @@ AnimatorController:
     m_Motions:
     - serializedVersion: 2
       m_State: {fileID: 1102373507809713874}
-      m_Motion: {fileID: 7400000, guid: 002a625e550bbdc469a2762d67501e08, type: 2}
+      m_Motion: {fileID: 0}
     m_Behaviours: []
     m_BlendingMode: 0
     m_SyncedLayerIndex: -1
@@ -443,7 +443,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions: []
   m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 1102182418185610492}
+  m_DstState: {fileID: 0}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
@@ -913,7 +913,7 @@ AnimatorStateMachine:
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 20, y: -130, z: 0}
+  m_AnyStatePosition: {x: -50, y: -170, z: 0}
   m_EntryPosition: {x: 220, y: -180, z: 0}
   m_ExitPosition: {x: 220, y: -220, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
