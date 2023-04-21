@@ -170,17 +170,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &442617783 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5147161410389686866, guid: cd32bbdea6de76e459052b9157a5de69, type: 3}
-  m_PrefabInstance: {fileID: 1462220757714743724}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &442617784 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5147161410389686867, guid: cd32bbdea6de76e459052b9157a5de69, type: 3}
   m_PrefabInstance: {fileID: 1462220757714743724}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 442617783}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04199117f1acf7b44914b3fef793004e, type: 3}
@@ -191,60 +186,18 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5147161410389687725, guid: cd32bbdea6de76e459052b9157a5de69, type: 3}
   m_PrefabInstance: {fileID: 1462220757714743724}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 442617783}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cfe9a4bfe495e0349aff0526582d1748, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &442617790
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 442617783}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
-  m_Mass: 0.44634956
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!70 &442617791
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 442617783}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1}
-  m_Size: {x: 1, y: 2}
-  m_Direction: 0
---- !u!1 &516251808 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 144532476420418108, guid: 1721e14d2a53fbd4886572215d4846fe, type: 3}
-  m_PrefabInstance: {fileID: 144532478483722324}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &516251809 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 144532476420418110, guid: 1721e14d2a53fbd4886572215d4846fe, type: 3}
   m_PrefabInstance: {fileID: 144532478483722324}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 516251808}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e94bc670e1de3ec42a9d372a7354a8a2, type: 3}
@@ -612,14 +565,14 @@ PrefabInstance:
     - target: {fileID: 1428403816291916278, guid: 1721e14d2a53fbd4886572215d4846fe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 165154700}
+      objectReference: {fileID: 516251809}
     - target: {fileID: 1428403816291916278, guid: 1721e14d2a53fbd4886572215d4846fe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CloseShop
+      value: Close
       objectReference: {fileID: 0}
     - target: {fileID: 1428403816291916278, guid: 1721e14d2a53fbd4886572215d4846fe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameManager, Assembly-CSharp
+      value: Bluegravity.Shop.ShopManager, Bluegravity.Shop
       objectReference: {fileID: 0}
     - target: {fileID: 1428403816435728116, guid: 1721e14d2a53fbd4886572215d4846fe, type: 3}
       propertyPath: m_Camera
@@ -722,9 +675,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5147161410389687725, guid: cd32bbdea6de76e459052b9157a5de69, type: 3}
-      propertyPath: Shop
-      value: 
-      objectReference: {fileID: 516251808}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd32bbdea6de76e459052b9157a5de69, type: 3}
