@@ -1,7 +1,8 @@
-using System.Collections;
+
+using System;
 using System.Collections.Generic;
 using Bluegravity.Common;
-using Igloovy.Patterns.Pool;
+using Emaj.Patterns;
 using UnityEngine;
 
 namespace Bluegravity.Shop
@@ -11,10 +12,10 @@ namespace Bluegravity.Shop
         public List<ChangeablePart> tabData;
         public Transform root;
         public TabItem item;
-        private TabItem activeTabItem;
-
         public Pool<ShopItem> shopItems;
-
+        public Action OnClose;
+        
+        private TabItem activeTabItem;
         private ShopItem activeShopItem;
 
         private void Start()
@@ -72,6 +73,13 @@ namespace Bluegravity.Shop
                     }
                 }
             }
+        }
+
+        
+        public void Close()
+        {
+            OnClose?.Invoke();
+            gameObject.SetActive(false);
         }
     }
 }

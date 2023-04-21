@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Igloovy.Patterns.Pool
+namespace Emaj.Patterns
 {
     [System.Serializable]
     public class Pool<T> where T : Component

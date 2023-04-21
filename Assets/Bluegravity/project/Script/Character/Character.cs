@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Bluegravity.Common;
@@ -8,6 +9,11 @@ namespace Bluegravity.Character
     public class Character : MonoBehaviour
     {
         public List<ChangeablePart> changeablePart;
+
+        private void Start()
+        {
+            SetPart();
+        }
 
         public void SetPart()
         {
@@ -22,7 +28,8 @@ namespace Bluegravity.Character
                         var data = changeable.spriteGroup.SpriteData.First(x => x.name == name);
                         foreach (var sprite in data.Sprites)
                         {
-                            if (playerPart.name == sprite.name)
+                            string partName = playerPart.name;
+                            if (partName.Replace("Right", "Left") == sprite.name)
                             {
                                 playerPart.sprite.sprite = sprite;
                             }
@@ -43,7 +50,6 @@ namespace Bluegravity.Character
                         }
                     }
                 }
-
             }
         }
     }

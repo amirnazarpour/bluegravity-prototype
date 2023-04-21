@@ -14,8 +14,30 @@ namespace Bluegravity.Character
         public int MovementSpeed;
 
         private bool _moving;
-        
-        
+
+        public Action OnShop;
+
+        public bool shopActive;
+
+        public GameObject shopSing;
+
+        private void OnTriggerEnter2D(Collider2D col)
+        {
+            if (col.gameObject.CompareTag("Shop"))
+            {
+                shopActive = true;
+                shopSing.SetActive(true);
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D col)
+        {
+            if (col.gameObject.CompareTag("Shop"))
+            {
+                shopActive = false;
+                shopSing.SetActive(false);
+            }
+        }
 
         private void Start()
         {
@@ -28,6 +50,13 @@ namespace Bluegravity.Character
         {
             Move();
             SetDirection();
+            if (shopActive)
+            {
+                if (Input.GetKey(KeyCode.R))
+                {
+                    OnShop?.Invoke();
+                }
+            }
         }
 
         private void Move()
@@ -36,22 +65,22 @@ namespace Bluegravity.Character
 
             var direction = Vector2.zero;
 
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetKey(KeyCode.A))
             {
                 direction += Vector2.left;
             }
 
-            if (Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.D))
             {
                 direction += Vector2.right;
             }
 
-            if (Input.GetKey(KeyCode.UpArrow))
+            if (Input.GetKey(KeyCode.W))
             {
                 direction += Vector2.up;
             }
 
-            if (Input.GetKey(KeyCode.DownArrow))
+            if (Input.GetKey(KeyCode.S))
             {
                 direction += Vector2.down;
             }
@@ -76,19 +105,19 @@ namespace Bluegravity.Character
         {
             Vector2 direction;
 
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            if (Input.GetKeyDown(KeyCode.A))
             {
                 direction = Vector2.left;
             }
-            else if (Input.GetKeyDown(KeyCode.RightArrow))
+            else if (Input.GetKeyDown(KeyCode.D))
             {
                 direction = Vector2.right;
             }
-            else if (Input.GetKeyDown(KeyCode.UpArrow))
+            else if (Input.GetKeyDown(KeyCode.W))
             {
                 direction = Vector2.up;
             }
-            else if (Input.GetKeyDown(KeyCode.DownArrow))
+            else if (Input.GetKeyDown(KeyCode.S))
             {
                 direction = Vector2.down;
             }
