@@ -21,35 +21,17 @@ namespace Bluegravity.Character
 
         public GameObject shopSing;
 
-        private void OnTriggerEnter2D(Collider2D col)
-        {
-            if (col.gameObject.CompareTag("Shop"))
-            {
-                shopActive = true;
-                shopSing.SetActive(true);
-            }
-        }
-
-        private void OnTriggerExit2D(Collider2D col)
-        {
-            if (col.gameObject.CompareTag("Shop"))
-            {
-                shopActive = false;
-                shopSing.SetActive(false);
-            }
-        }
+   
 
         private void Start()
         {
             animationContoroller = GetComponent<AnimationContoroller>();
             animationContoroller.SetState(CharacterState.Idle);
-            SetDirection(Vector2.down);
         }
 
         private void Update()
         {
             Move();
-            SetDirection();
             if (shopActive)
             {
                 if (Input.GetKey(KeyCode.R))
@@ -90,41 +72,19 @@ namespace Bluegravity.Character
                 if (_moving)
                 {
                     animationContoroller.SetState(CharacterState.Idle);
+                    SetDirection(direction);
                     _moving = false;
                 }
             }
             else
             {
+                SetDirection(direction);
                 animationContoroller.SetState(CharacterState.Run);
                 transform.position += (Vector3)direction.normalized * MovementSpeed * Time.deltaTime;
                 _moving = true;
             }
         }
 
-        private void SetDirection()
-        {
-            Vector2 direction;
-
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                direction = Vector2.left;
-            }
-            else if (Input.GetKeyDown(KeyCode.D))
-            {
-                direction = Vector2.right;
-            }
-            else if (Input.GetKeyDown(KeyCode.W))
-            {
-                direction = Vector2.up;
-            }
-            else if (Input.GetKeyDown(KeyCode.S))
-            {
-                direction = Vector2.down;
-            }
-            else return;
-
-            SetDirection(direction);
-        }
 
         private void SetDirection(Vector2 direction)
         {
@@ -133,7 +93,7 @@ namespace Bluegravity.Character
             Direction = direction;
 
 
-            int index;
+            int index = 5;
 
             if (direction == Vector2.left)
             {
@@ -151,14 +111,33 @@ namespace Bluegravity.Character
             {
                 index = 0;
             }
-            else
+
+            if (index == 5)
             {
-                throw new NotSupportedException();
+                return;
             }
 
             for (var i = 0; i < character.Count; i++)
             {
                 character[i].gameObject.SetActive(i == index);
+            }
+        }
+        
+        private void OnTriggerEnter2D(Collider2D col)
+        {
+            if (col.gameObject.CompareTag("Shop"))
+            {
+                shopActive = true;
+                shopSing.SetActive(true);
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D col)
+        {
+            if (col.gameObject.CompareTag("Shop"))
+            {
+                shopActive = false;
+                shopSing.SetActive(false);
             }
         }
     }
